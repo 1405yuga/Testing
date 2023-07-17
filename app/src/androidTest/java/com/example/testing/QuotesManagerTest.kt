@@ -53,4 +53,20 @@ class QuotesManagerTest {
         //assert
         Assert.assertEquals("1", result.author)
     }
+
+    @Test
+    fun test_NextQuote() {
+        //arrange
+        val quoteManager = QuotesManager()
+        quoteManager.quoteList = arrayOf(
+            Quote("1st quote","1"),
+            Quote("2nd quote","2"),
+            Quote("3rd quote","3")
+        )
+        //act
+        val result : Quote = quoteManager.getNextQuote()
+
+        //assert
+        Assert.assertEquals("2", result.author)
+    }
 }
