@@ -29,5 +29,10 @@ class QuotesManager() {
         return quoteList[++currentQuoteIndex]
     }
 
+    fun getPreviousQuote() : Quote{
+        if(currentQuoteIndex == 0) return quoteList[currentQuoteIndex]
+        return quoteList[--currentQuoteIndex]
+    }
+
 
 }
