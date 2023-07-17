@@ -6,7 +6,7 @@ import com.google.gson.Gson
 class QuotesManager() {
 
     var quoteList = emptyArray<Quote>()
-    val currentQuoteIndex = 0
+    var currentQuoteIndex = 0
 
     fun populateQuoteFromAssets(context: Context, filename: String) {
         val inputStream = context.assets.open(filename)
@@ -22,6 +22,11 @@ class QuotesManager() {
 
     fun getCurrentQuote() : Quote{
         return quoteList[currentQuoteIndex]
+    }
+
+    fun getNextQuote() : Quote{
+        if(currentQuoteIndex == quoteList.size-1) return quoteList[currentQuoteIndex]
+        return quoteList[++currentQuoteIndex]
     }
 
 
