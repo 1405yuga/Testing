@@ -20,4 +20,9 @@ class QuotesManager() {
         quoteList = gson.fromJson(json,Array<Quote>::class.java)
     }
 
+    fun getCurrentQuote() : Quote{
+        return quoteList[currentQuoteIndex]
+    }
+
+
 }
