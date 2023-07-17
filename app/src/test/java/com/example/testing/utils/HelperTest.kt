@@ -17,4 +17,16 @@ class HelperTest {
         //assert
         assertEquals(false,result)
     }
+
+    @Test
+    fun isPalindrome_level() {
+        //arrange
+        val helper = Helper()
+
+        //act
+        val result = helper.isPalindrome("level")
+
+        //assert
+        assertEquals(true,result)
+    }
 }
